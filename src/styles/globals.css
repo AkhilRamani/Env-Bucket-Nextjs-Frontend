@@ -1,0 +1,20 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9!important;
+  padding-top: 32.7px;
+}
+
+.round-border{
+  border-radius: 15px!important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
