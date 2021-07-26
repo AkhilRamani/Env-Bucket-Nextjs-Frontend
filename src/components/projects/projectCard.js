@@ -30,7 +30,7 @@ export const ProjectCard = ({name, cover, files, onClick}) => {
     const classes = useStyles()
 
     return (
-        <Container px={3} onClick={onClick}>
+        <Container px={3} onClick={() => onClick(name)}>
             {/* <img src='./assets/demo-cover.png' className='round-border' width='50px' height='40px' /> */}
             <Box width='50px' height='40px' className='round-border' style={{backgroundColor: coverColors[cover]}} />
 

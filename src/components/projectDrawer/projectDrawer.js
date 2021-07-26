@@ -3,6 +3,7 @@ import { Box, useTheme, Drawer, makeStyles, Typography, IconButton, Divider, App
 import CloseIcon from '@material-ui/icons/Close';
 import dynamic from 'next/dynamic'
 import SwipeableViews from 'react-swipeable-views';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 import { TabPanel } from '../tabPanel'
 import { coverColors } from "../../utils/constants";
@@ -24,7 +25,7 @@ const useStyle = makeStyles(theme => ({
     }
 }))
 
-export const ProjectDrwaer = ({ open, onClose }) => {
+export const ProjectDrwaer = ({ project, open, onClose }) => {
     const classes = useStyle()
     const theme = useTheme();
     const [value, setValue] = useState(0);
@@ -32,7 +33,7 @@ export const ProjectDrwaer = ({ open, onClose }) => {
     const handleChange = (event, newValue) => setValue(newValue)
     const handleChangeIndex = (index) => setValue(index)
 
-    
+    const { name } = project
 
     return (
         <Drawer
@@ -49,12 +50,16 @@ export const ProjectDrwaer = ({ open, onClose }) => {
                 <IconButton onClick={onClose}>
                     <CloseIcon />
                 </IconButton>
-                <Typography variant='h4' style={{ marginLeft: 20 }}>Project</Typography>
+                <Box display='flex' alignItems='center' justifyContent='space-between' flexGrow='2' >
+                    <Typography variant='h4' style={{ marginLeft: 20 }}>{name}</Typography>
+                    <IconButton>
+                        <SettingsIcon />
+                    </IconButton>
+                </Box>
             </Box>
             <Divider />
 
             <Box p={3} flexGrow='1' overflow='scroll' >
-                <Typography variant='h3' >Match my makeup</Typography>
 
                 {/* <Box  >
                     <Typography>Total 3 environments</Typography>
@@ -89,7 +94,7 @@ export const ProjectDrwaer = ({ open, onClose }) => {
             </Box>
 
             <Box>
-                <AppBar position='static' color="default" variant='outlined' >
+                <AppBar position='static' color="default" variant='outlined' style={{ borderLeft: 0 }} >
                     <BottomTabBar value={value} onChange={handleChange} />
                 </AppBar>
             </Box>

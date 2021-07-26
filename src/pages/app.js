@@ -7,8 +7,10 @@ import { Projects } from "../components/projects/projects";
 
 export default function App() {
   const [open, setOpen] = useState(false);
+  const [openProject, setOpenProject] = useState({})
 
-  const handleDrawerOpen = () => {
+  const handleDrawerOpen = (projectName) => {
+    setOpenProject({name: projectName})
     setOpen(true);
   };
 
@@ -30,7 +32,11 @@ export default function App() {
             <Projects onProjectClick={handleDrawerOpen} />
           </Box>
         </Container>
-        <ProjectDrwaer open={open} onClose={_handleDrawerClose} />
+        <ProjectDrwaer 
+          open={open} 
+          onClose={_handleDrawerClose} 
+          project={openProject}
+        />
       </Box>
     </div>
   );

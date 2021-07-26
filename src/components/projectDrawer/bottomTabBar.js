@@ -1,20 +1,16 @@
 import { Tabs, Tab, makeStyles, useTheme } from "@material-ui/core"
 
 const useStyle = makeStyles({
-    root: {
-        '&>..Mui-selected': {
-            
-        }
-    },
     tab: {
         textTransform: 'capitalize',
         fontSize: 16,
         position: 'relative',
         zIndex: 2,
-        fontWeight: '600'
+        fontWeight: '600',
+        height: 60
     },
     selected: {
-        color: '#fff',
+        // color: '#fff',
         transitionDelay: '0.13s'
     }
 })
@@ -40,6 +36,7 @@ export const BottomTabBar = ({ value, onChange, children }) => {
                     // borderRadius: 15,
                     margin: 'auto',
                     zIndex: 1,
+                    backgroundColor: '#dedede'
                 }
             }}
             TabScrollButtonProps={{
