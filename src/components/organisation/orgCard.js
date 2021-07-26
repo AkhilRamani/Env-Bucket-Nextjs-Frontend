@@ -16,7 +16,7 @@ export const OrgCard = ({item}) => (
       <CardContent>
         <Typography variant='h3' gutterBottom>{item.name}</Typography>
         <Box display='flex' justifyContent='space-between' mt={3} >
-          <AvatarGroup max={5} spacing='small' style={{ marginLeft: 'auto' }} >
+          <AvatarGroup max={5} spacing='medium' style={{ marginLeft: 'auto' }} >
             {['AR', 'JA', 'ME', 'OT', 'XS'].map(t => <Avatar style={{width: 35, height: 35, fontSize: 15}} key={t}>{t}</Avatar>)}
           </AvatarGroup>
         </Box>
