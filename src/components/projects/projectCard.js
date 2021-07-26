@@ -1,4 +1,5 @@
 import { Box, makeStyles, Typography, withStyles } from "@material-ui/core";
+import { coverColors } from "../../utils/constants";
 import { FileChip } from "../fileChip";
 
 const Container = withStyles({
@@ -25,12 +26,13 @@ const useStyles = makeStyles({
     }
 })
 
-export const ProjectCard = ({name, cover, files}) => {
+export const ProjectCard = ({name, cover, files, onClick}) => {
     const classes = useStyles()
 
     return (
-        <Container px={3}>
-            <img src='./assets/demo-cover.png' className='round-border' width='50px' height='40px' />
+        <Container px={3} onClick={onClick}>
+            {/* <img src='./assets/demo-cover.png' className='round-border' width='50px' height='40px' /> */}
+            <Box width='50px' height='40px' className='round-border' style={{backgroundColor: coverColors[cover]}} />
 
             <Box display='flex' justifyContent='space-between' flexGrow='1' alignItems='center' ml={3} >
                 <Typography className={classes.text} variant='h5'>{name}</Typography>

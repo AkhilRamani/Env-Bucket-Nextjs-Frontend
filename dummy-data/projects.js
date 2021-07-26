@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         name: 'Match my makeup',
         updatedAt: "Fri Jul 23 2021 22:08:47 GMT+1000",
-        cover: 1,
+        cover: 0,
         files: [
             {
                 id: 1,
@@ -26,7 +26,7 @@ export const projectsData = [
         id: 2,
         name: 'Suncorp PDS',
         updatedAt: "Fri Jul 23 2021 22:08:47 GMT+1000",
-        cover: 1,
+        cover: 2,
         files: [
             {
                 id: 1,
@@ -44,7 +44,7 @@ export const projectsData = [
         id: 3,
         name: 'Zeonlabs - internal',
         updatedAt: "Fri Jul 23 2021 22:08:47 GMT+1000",
-        cover: 1,
+        cover: 4,
         files: [
             {
                 id: 1,
@@ -67,7 +67,7 @@ export const projectsData = [
         id: 4,
         name: 'Fusion Lab ERP',
         updatedAt: "Fri Jul 23 2021 22:08:47 GMT+1000",
-        cover: 1,
+        cover: 3,
         files: [
             {
                 id: 1,
@@ -90,7 +90,7 @@ export const projectsData = [
         id: 5,
         name: 'Deloitte AI Pipeline',
         updatedAt: "Fri Jul 23 2021 22:08:47 GMT+1000",
-        cover: 1,
+        cover: 0,
         files: [
             {
                 id: 2,

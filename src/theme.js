@@ -17,6 +17,9 @@ const theme = createTheme({
     background: {
       default: '#fff',
     },
+    white: {
+      default: '#fff',
+    },
   },
   typography: {
     fontFamily: ["-apple-system", "BlinkMacSystemFont", "Segoe UI","Roboto","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"],

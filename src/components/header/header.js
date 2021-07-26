@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography } from "@material-ui/core"
 
-export const Header = ({title}) => {
+export const Header = ({ title }) => {
     return (
         <AppBar variant='outlined' color='default'>
             <Toolbar>

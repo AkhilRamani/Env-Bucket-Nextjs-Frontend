@@ -9,10 +9,10 @@ const Container = withStyles({
     }
 })(Paper)
 
-export const Projects = () => {
+export const Projects = ({onProjectClick}) => {
     return (
         <Container variant='outlined' >
-            <Box pt={3} >
+            <Box pt={3} borderRadius={15} overflow='hidden' >
                 <Box px={3} display='flex' alignItems='center' justifyContent='space-between' >
                     <Typography variant='h4'>All Projects</Typography>
                     <CustomButton>Create project</CustomButton>
@@ -26,6 +26,7 @@ export const Projects = () => {
                             name={project.name}
                             cover={project.cover}
                             files={project.files}
+                            onClick={onProjectClick}
                         />
                     ))}
                 </Box>
